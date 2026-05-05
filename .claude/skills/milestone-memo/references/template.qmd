@@ -1,0 +1,86 @@
+---
+title: Milestone Memo
+subtitle: "{{research_topic}}"
+author: "Angela Crabtree"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: false
+    number-sections: false
+    self-contained: true
+    page-layout: article
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+---
+
+```{=html}
+<div class="brief-header">
+  <span class="badge bg-primary">{{PROJECT_NAME}}</span>
+  <span class="badge bg-secondary">{{DATE_RANGE}}</span>
+  {{#if MILESTONE_HIT}}<span class="badge bg-success">✓ {{MILESTONE_LABEL}}</span>{{/if}}
+</div>
+```
+
+## 🔬 What I Did
+
+*One clear sentence describing the core work.*
+
+{{WORK_SUMMARY_1_2_SENTENCES}}
+
+{{FIGURE_OR_IMAGE_BLOCK}}
+<!-- 
+If user provided a figure, embed it here:
+![Figure caption](path/to/figure.png){fig-align="center" width="90%"}
+
+If no figure was provided, use a Mermaid diagram or ASCII schematic:
+-->
+
+```{mermaid}
+%%| fig-cap: "{{FIGURE_CAPTION}}"
+{{MERMAID_DIAGRAM_CODE}}
+```
+
+---
+
+## 📍 Why It Matters
+
+*2–3 sentences connecting this work to a grant aim, clinical question, or project milestone.*
+
+{{WHY_IT_MATTERS}}
+
+::: {.callout-note icon="🌐"}
+## Field Position
+
+{{FIELD_POSITION_PARAGRAPH}}
+
+> *Recent context: {{PAPER_1_AUTHOR}} et al. ({{YEAR}}) — {{ONE_SENTENCE_SUMMARY}}. Our approach {{DIFFERENTIATOR}}.*
+
+{{#if PAPER_2}}
+> *Also relevant: {{PAPER_2_AUTHOR}} et al. ({{YEAR}}) — {{ONE_SENTENCE_SUMMARY}}.*
+{{/if}}
+:::
+
+---
+
+## ⏭️ What's Next
+
+{{NEXT_STEPS_2_3_BULLETS}}
+
+---
+
+## ✋ Ask
+
+::: {.callout-important icon="📌"}
+{{SPECIFIC_ASK_OR_DECISION_NEEDED}}
+:::
+
+---
+
+```{=html}
+<div class="brief-footer">
+  <small>Prepared by {{YOUR_NAME}} · {{DATE}} · {{LAB_NAME}}</small>
+</div>
+```
